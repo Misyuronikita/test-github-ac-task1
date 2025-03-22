@@ -1,0 +1,12 @@
+name: Event Details
+
+on: 
+  issues:
+    types: [opened]
+
+jobs:
+  event_info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Info About Event
+        run: "echo ${{github.event.issue}}"
