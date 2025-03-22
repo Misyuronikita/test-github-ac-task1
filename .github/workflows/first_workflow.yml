@@ -15,9 +15,9 @@ jobs:
           node-version: '20'
       - name: Install Dependencies
         run: npm ci
-      - name: Lint Code
+      - name: Lint testing
         run: npm run lint
-      - name: Test Code
+      - name: Unit testing
         run: npm run test
     
   build:
@@ -32,7 +32,7 @@ jobs:
           node-version: '20'
       - name: Install Dependencies
         run: npm ci
-      - name: Test Code
+      - name: Build Project
         run: npm run build
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
           node-version: '20'
       - name: Install Dependencies
         run: npm ci
-      - name: Test Code
+      - name: Deploy project
         run: echo "Deploying ..."
